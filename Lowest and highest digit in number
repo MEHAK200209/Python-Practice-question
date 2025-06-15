@@ -1,0 +1,14 @@
+def find_max_min_digits(number):
+    digits = [int(d) for d in str(number)]
+    highest = max(digits)
+    lowest = min(digits)
+    return highest, lowest
+
+num_input = input("Enter a number: ")
+
+if num_input.isdigit():
+    max_digit, min_digit = find_max_min_digits(num_input)
+    print(f"Highest digit: {max_digit}")
+    print(f"Lowest digit: {min_digit}")
+else:
+    print("Invalid input. Please enter a positive integer.")
